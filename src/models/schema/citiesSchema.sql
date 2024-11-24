@@ -1,0 +1,4 @@
+CREATE TABLE
+    IF NOT EXISTS cities (id TEXT PRIMARY KEY NOT NULL, name TEXT NOT NULL);
+
+CREATE INDEX IF NOT EXISTS cities_name_index ON cities (name);

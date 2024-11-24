@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 14px;
+  }
+  input,
+  select,
+  textarea {
+    @apply resize-none block w-full border focus:outline-none focus:border-rose-600 focus:ring-2 focus:ring-rose-200 p-3 rounded-xl;
+  }
+  button {
+    @apply block w-full disabled:opacity-15 disabled:cursor-wait bg-rose-600 text-white font-semibold rounded-xl p-3;
+  }
+  h1 {
+    @apply text-5xl tracking-tighter;
+  }
+  h2 {
+    @apply text-3xl font-medium;
+  }
+  h3 {
+    @apply text-lg font-medium tracking-tight;
+  }
+  h4 {
+    @apply text-sm tracking-tight font-medium text-slate-400;
+  }
+}
+
+@layer components {
+  .msg {
+    @apply p-3 text-center rounded-xl border bg-slate-50 text-slate-500 font-medium;
+  }
+
+  .msg-error {
+    @apply border-red-500 bg-red-50 text-red-500;
+  }
+
+  .msg-success {
+    @apply border-green-500 bg-green-50 text-green-500;
+  }
+
+  .tag {
+    @apply px-4 py-1 rounded-full w-fit bg-white hover:bg-slate-300 border hover:border-slate-500 cursor-pointer;
+  }
+
+  #fileUpload {
+    display: inline-block;
+    width: 100%;
+    padding: 150px 0 0 0;
+    height: 130px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png") center center no-repeat #fff;
+    border-radius: 8px;
+    background-size: 30px 30px;
+    cursor: pointer;
+  }
+}
